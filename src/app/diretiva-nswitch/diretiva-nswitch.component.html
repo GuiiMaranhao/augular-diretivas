@@ -1,0 +1,45 @@
+<h1>*ngSwitcgh</h1>
+
+<nav class="menu">
+  <ul>
+    <li
+      [class.active]="abaSelect === 'home'"
+      (click)="handleSelectMenu('home')"
+    >
+      Home
+    </li>
+    <li
+      [class.active]="abaSelect === 'sobre'"
+      (click)="handleSelectMenu('sobre')"
+    >
+      Sobre
+    </li>
+    <li
+      [class.active]="abaSelect === 'contato'"
+      (click)="handleSelectMenu('contato')"
+    >
+      Contato
+    </li>
+  </ul>
+</nav>
+
+<div [ngSwitch]="abaSelect">
+  <p *ngSwitchCase="'sobre'">sobre</p>
+  <p *ngSwitchCase="'contato'">contato</p>
+  <p *ngSwitchDefault>home</p>
+</div>
+
+
+<h5>Removendo o * e usando templates</h5>
+
+<div [ngSwitch]="abaSelect">
+  <ng-template [ngSwitchCase]="'sobre'">
+    <p>sobre</p>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'contato'">
+    <p>contato</p>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+    <p>home</p>
+  </ng-template>
+</div>

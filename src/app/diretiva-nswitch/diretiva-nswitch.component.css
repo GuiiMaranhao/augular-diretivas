@@ -1,0 +1,15 @@
+nav.menu {
+
+}
+
+nav.menu ul {
+
+}
+
+nav.menu ul li {
+  cursor: pointer;
+}
+
+nav.menu ul li.active {
+  color: red;
+}

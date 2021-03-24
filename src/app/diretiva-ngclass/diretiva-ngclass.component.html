@@ -1,0 +1,19 @@
+<h1>*ngClass</h1>
+
+<div
+  class="star"
+  [class.active]="meuFavorito"
+  (click)="handleClickFavorite()"
+>
+</div>
+
+
+<div
+  class="star"
+  [ngClass]="{
+    'active': meuFavorito,
+    'border': meuFavorito
+  }"
+  (click)="handleClickFavorite(true)"
+>
+</div>

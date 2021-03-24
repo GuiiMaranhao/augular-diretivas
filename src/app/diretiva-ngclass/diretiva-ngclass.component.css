@@ -1,0 +1,16 @@
+div.star {
+  border: 5px solid yellow;
+  padding: 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+div.star.active {
+  background: yellow;
+}
+
+div.star.active.border {
+  border-radius: 50%;
+}
+
